@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retail Store Demand Forecast Analysis</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: rgba(255, 255, 255, 0.08);
+      --card-border: rgba(255, 255, 255, 0.14);
+      --text: #e5e7eb;
+      --muted: #cbd5e1;
+      --accent: #22c55e;
+      --accent-2: #38bdf8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(56, 189, 248, 0.18), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(34, 197, 94, 0.15), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 48px 20px 60px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.15);
+      color: #86efac;
+      font-size: 14px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(34, 197, 94, 0.25);
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.1;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    .points {
+      margin: 22px 0 28px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .points li {
+      margin: 12px 0;
+      color: var(--text);
+      font-size: 16px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 14px 22px;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: 0.25s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #16a34a);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(34, 197, 94, 0.25);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--card-border);
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 22px;
+      padding: 18px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    .preview {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border-radius: 16px;
+      object-fit: cover;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .section {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .mini {
+      padding: 18px;
+    }
+
+    .mini h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .mini p {
+      font-size: 15px;
+    }
+
+    footer {
+      margin-top: 38px;
+      color: #94a3b8;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 860px) {
+      .hero,
+      .section {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="hero">
+      <div>
+        <span class="badge">Power BI Dashboard Project</span>
+        <h1>Retail Store Demand Forecast Analysis</h1>
+        <p>
+          A retail analytics dashboard built to study sales trends, product category performance,
+          customer patterns, and demand behavior for better business decisions.
+        </p>
+
+        <ul class="points">
+          <li>• Total sales overview with interactive dashboard visuals</li>
+          <li>• Product category analysis and gender-based insights</li>
+          <li>• Age and date filters for dynamic exploration</li>
+          <li>• Published and ready to view online</li>
+        </ul>
+
+        <div class="buttons">
+          <a class="btn btn-primary" href="PASTE_YOUR_POWER_BI_REPORT_LINK_HERE" target="_blank" rel="noopener noreferrer">
+            Open Report
+          </a>
+          <a class="btn btn-secondary" href="#about">
+            View Details
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="preview" src="dashboard-screenshot.png" alt="Retail Store Demand Forecast dashboard screenshot" />
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="card mini">
+        <h3>Goal</h3>
+        <p>Analyze retail demand patterns and identify sales behavior across categories, gender, age, and time.</p>
+      </div>
+      <div class="card mini">
+        <h3>Tools Used</h3>
+        <p>Power BI, Python, Pandas, and data visualization techniques.</p>
+      </div>
+      <div class="card mini">
+        <h3>Outcome</h3>
+        <p>An interactive dashboard that helps understand retail trends in a simple and clear way.</p>
+      </div>
+    </section>
+
+    <footer>
+      Built for portfolio and project showcase.
+    </footer>
+  </div>
+</body>
+</html>
